@@ -3,3 +3,6 @@
 ################################################################################
 
 /ReportIPAddress/obj/Debug
+/ReportIPAddress/bin/Debug
+/ReportIPAddressUnitTest/obj/Debug
+/ReportIPAddressUnitTest/bin/Debug
