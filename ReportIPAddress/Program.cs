@@ -16,8 +16,8 @@ namespace ReportIPAddress
                 x.Service<IPAddressService>();
 
                 x.RunAsLocalSystem();
-                x.SetDisplayName("IPAddress Reporter");
-                x.SetDescription("自动汇报IP地址");
+                x.SetDisplayName(ConfigHelper.SystemHelper.ServiceName);
+                x.SetDescription(ConfigHelper.SystemHelper.ServiceDescription);
             });
         }
     }

@@ -10,7 +10,7 @@ namespace ReportIPAddressUnitTest
         [TestMethod]
         public void GetIPAddressTest()
         {
-            var ipArray =new IPAddressHelper().GetIPAddress();
+            var ipArray =new IPAddressService().GetIPAddress();
 
             Assert.IsFalse(string.IsNullOrEmpty(ipArray));
         }
