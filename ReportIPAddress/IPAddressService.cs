@@ -39,7 +39,10 @@ namespace ReportIPAddress
         public string GetIPAddress()
         {
             IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
-            return string.Join(";", ipHost.AddressList.Select(item => item.ToString()));
+            return string.Join(";\r\n", ipHost.AddressList.ToList().
+                FindAll(item => item.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork).
+                Distinct().
+                Select(item => item.ToString()));
         }
     }
 }
